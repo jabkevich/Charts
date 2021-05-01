@@ -170,9 +170,9 @@ export default function MiniDrawer() {
 
 
             </Drawer>
-            <main className={classes.content}>
+            <main className={classes.content} style={{"padding": "0 50px 100px 50px"}}>
                 <div className={classes.toolbar} />
-                <Route exact path={"/standardLiving"} component={BudgetExecution}/>
+                <Route path={"/"} component={BudgetExecution}/>
             </main>
         </div>
     );

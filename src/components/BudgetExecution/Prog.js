@@ -40,8 +40,8 @@ const App = (props)=> {
         return (
             <ComposedChart
                 layout="vertical"
-                width={800}
-                height={400}
+                width={900}
+                height={350}
                 data={props.expenditureProgram.January}
                 margin={{
                     top: 20,

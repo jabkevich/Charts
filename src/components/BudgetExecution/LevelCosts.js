@@ -14,11 +14,12 @@ import DescriptionIcon from "@material-ui/icons/Description";
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        minWidth: "500px",
+        minWidth: "700px",
         background: "#181a1e",
         flexDirection: "column",
         border: "solid #22252a 1px",
         color: "#d1d1d2",
+        minHeight: "180px"
     },
     details: {
         width: "100%",

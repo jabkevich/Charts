@@ -3,17 +3,19 @@ import React from "react";
 import { PieChart, Pie, Sector, Cell } from "recharts";
 
 const data = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 }
+    { name: "Group A", value: 31.7 },
+    { name: "Group B", value: 19.7 },
+    { name: "Group C", value: 7 },
+    { name: "Group D", value: 5 },
+    { name: "Group E", value: 2 },
+    { name: "Group F", value: 34.3 }
 ];
 const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-    return (`${(percent * 100).toFixed(0)}%`
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index, value}) => {
+    return (`${(value)}%`
     );
 }
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const COLORS = ["#31acfd", "#3f84fc", "#fc605d", "#505172", "#99a1b3", "#cfd7df"];
 
 export default function Families() {
     return (

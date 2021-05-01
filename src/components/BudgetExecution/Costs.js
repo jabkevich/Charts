@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         border: "solid #22252a 1px",
         color: "#d1d1d2",
+        minHeight: "180px"
     },
     details: {
         width: "100%",

@@ -1,8 +1,12 @@
 html, body, body >:first-child{
   margin: 0;
   padding: 0;
-  height: 100vmax;
+  height: 100%;
   width: auto;
   color: #d1d1d2;
   background: #121212
+}
+
+*{
+  box-sizing: border-box;
 }
