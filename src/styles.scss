@@ -4,9 +4,12 @@ html, body, body >:first-child{
   height: 100%;
   width: auto;
   color: #d1d1d2;
-  background: #121212
+  background: #121212;
+  min-width: 982px;
 }
+body{
 
+}
 *{
   box-sizing: border-box;
 }

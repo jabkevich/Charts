@@ -39,32 +39,35 @@ const data = [
         pv: 3800,
         amt: 2500
     },
-    {
-        name: "2016",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100
-    }
+
 ];
 
-export default function LevelCosts2() {
-    return (
-        <div>
+export default function LevelCosts2(props) {
+    if(props.levelLiveToNumber)
+        return (
+            <div>
 
-            <LineChart width={800} height={500} data={data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" interval={0} angle={30} dx={20} />
-                <YAxis />
-                <Legend />
-                <Line
-                    type="monotone"
-                    dataKey="pv"
-                    stroke="#8884d8"
-                    activeDot={{ r: 8 }}
-                />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                <Line type="monotone" dataKey="amt" stroke="#82ca9d" />
-            </LineChart>
-        </div>
-    );
+                <LineChart width={731} height={349} data={props.levelLiveToNumber.data}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" interval={0} angle={30} dx={20} />
+                    <YAxis />
+                    <Legend />
+                    <Line
+                        type="monotone"
+                        dataKey="group1"
+                        stroke="#8884d8"
+                        activeDot={{ r: 8 }}
+                    />
+                    <Line type="monotone" dataKey="group2" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="group3" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="group4" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="group5" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="group6" stroke="#82ca9d" />
+                    <Line type="monotone" dataKey="group7" stroke="#82ca9d" />
+                </LineChart>
+            </div>
+        )
+    else{
+        return <div>loading</div>
+    }
 }

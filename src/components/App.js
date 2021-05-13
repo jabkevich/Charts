@@ -9,9 +9,9 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <Switch>
-                   <Menu/>
-                </Switch>
+                    <div style={{"minWidth": "982px"}}>
+                    <Menu/>
+                    </div>
             </Router>
         )
     }

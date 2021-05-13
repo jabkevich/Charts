@@ -1,4 +1,4 @@
-import {GET_BUDGET_EXPENDITURE} from "./types";
+import {GET_BUDGET_EXPENDITURE, GET_LEVEL_NUMBERS, GET_LEVEL_PRECENT} from "./types";
 /*
 * healthCare: []
 *
@@ -23,9 +23,9 @@ const initialState = {
     * }
     *
     * */
-    expenditureProgram: {
-
-    }
+    expenditureProgram: {},
+    levelLiveToPresent: {},
+    levelLiveToNumber: {}
 }
 
 
@@ -33,7 +33,18 @@ export const budgetExecutionReducer = (state = initialState, action) =>{
     switch (action.type){
         case GET_BUDGET_EXPENDITURE:
             return{
+                ...state,
                 expenditureProgram: action.payload
+            }
+        case GET_LEVEL_PRECENT:
+            return{
+                ...state,
+                levelLiveToPresent: action.payload
+            }
+        case GET_LEVEL_NUMBERS:
+            return{
+                ...state,
+                levelLiveToNumber: action.payload
             }
         default:
             return state

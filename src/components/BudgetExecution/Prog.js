@@ -27,9 +27,9 @@ const colors = scaleOrdinal(schemeCategory10).range();
 
 const App = (props)=> {
 
-    useEffect(()=>{
-        props.getBudgetExecution(2017)
-    })
+    // useEffect(()=>{
+    //     props.getBudgetExecution(2018)
+    // })
 
     const color =["#FF1493",
         "#228B22", "#FF4500", "#40E0D0", "#8A2BE2",
@@ -64,7 +64,6 @@ const App = (props)=> {
             </ComposedChart>
         );
     }else{
-        console.log(props.expenditureProgram)
         return (
             <div>
                 загрузка
@@ -74,11 +73,11 @@ const App = (props)=> {
 
 }
 
-const mapStateToProps =state=> {
-    return{
-        expenditureProgram: state.budget.expenditureProgram
-    }
+// const mapStateToProps =state=> {
+//     return{
+//         expenditureProgram: state.budget.expenditureProgram
+//     }
+//
+// }
 
-}
-
-export default connect(mapStateToProps, {getBudgetExecution})(App)
+export default App
